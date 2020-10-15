@@ -2,3 +2,6 @@
 - name: test task
   debug:
     msg: "test role"
+
+- name: if this file does not exist, let me know, but continue
+  debug: msg="{{ lookup('file', 'myfile.txt') }}"
